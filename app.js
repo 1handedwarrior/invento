@@ -61,8 +61,8 @@ function greet(){
     }, 3000)
 }
 */
-
-
+/*
+//Find the bug :~]
 let counter = 0;
 
 document.getElementById('resetBtn').onclick = () => {
@@ -70,8 +70,12 @@ document.getElementById('resetBtn').onclick = () => {
     document.getElementById('myLabel').innerHTML = counter;
 }
 document.getElementById('generateBtn').onclick = () => {
-    counter = Math.random(counter)
-    //counter = Math.round(counter)
-    counter = counter * 50
+    counter = Math.random() * 50 + 1;
+    counter = Math.toFixed(2);
     document.getElementById('myLabel').innerHTML = counter;
 }
+*/
+
+document.getElementById('nine').onclick = () => {
+    document.getElementById('myInput').textContent = '9'
+} 
