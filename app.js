@@ -25,25 +25,7 @@ for(let i = 0; i <= 40; i++){
     
 }
 */
-/*
-let fruits = ['apple', 'banana', 'mango']
-let milk = ['oat milk', 'cow milk', 'no milk']
 
-function myOrder() {
-    console.log(`Let me have ${fruits[2]} with ${milk[0]} please`)
-}
-
-
-function wholeOrder(){
-    
-    setTimeout(() => {
-        let secondOrder = console.log('And a number 1')
-        secondOrder;
-    }, 2000)
-}
-myOrder()
-wholeOrder()
-*/
 /*
 let pi = 3.14;
 
@@ -51,15 +33,17 @@ console.log(Math.floor(pi))
 console.log(Math.ceil(pi))
 console.log(Math.round(pi))
 console.log(Math.random(pi))
-console.log(Math.random(pi))
-
-let bro = 'chris';
+console.log(Math.random(pi) * 100)
+/*
+let bro = prompt('Enter your name: ')
 
 function greet(){
     setTimeout(() => {
-        console.log(`Sup ${bro}`)
-    }, 3000)
+        alert(`Sup ${bro}`)
+    }, 5000)
 }
+    
+greet()
 */
 /*
 //Find the bug :~]
@@ -70,12 +54,104 @@ document.getElementById('resetBtn').onclick = () => {
     document.getElementById('myLabel').innerHTML = counter;
 }
 document.getElementById('generateBtn').onclick = () => {
-    counter = Math.random() * 50 + 1;
-    counter = Math.toFixed(2);
-    document.getElementById('myLabel').innerHTML = counter;
+    counter = Math.random() * 50;
+    document.getElementById('myLabel').innerHTML = counter.toFixed(2);
 }
 */
 
-document.getElementById('nine').onclick = () => {
-    document.getElementById('myInput').textContent = '9'
-} 
+/*
+let username = prompt('Enter your username: ')
+
+function task1(callback) {
+    console.log(`Whats up ${username}`)
+    callback();
+}
+
+function task2(callback) {
+    console.log(`Lets fuck vegeta up`)
+    callback();
+}
+
+function task3(callback) {
+    console.log(`Loredm ipsum`)
+    callback();
+}
+
+function task4(callback) {
+    console.log(`Lorem ipsum`)
+    callback();
+}
+
+function task5(callback) {
+    console.log(`Whats up ${username}`)
+    callback();
+}
+
+task1(() => {
+    task2(() => {
+        task3(() => {
+            task4(() => {
+                task5(() => {
+                    console.log(`goodbye ${username}`)
+                })
+            })
+        })
+    })
+})
+*/
+
+
+
+/*
+fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve()
+    }, 2000)
+})
+
+promise 
+    .then(response => response.json())
+    .then(data => console.log(data));
+
+
+fetch('https://pokeapi.co/api/v2/pokemon/onix')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(() => console.error('Whoops error'))
+*/
+/*
+let input = document.getElementById('enterBtn');
+let pokemonSelection = document.getElementById('pokeChoice');
+
+input.onclick = () => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonSelection.value}`)
+    .then(response => {
+        if(!response.ok){
+            throw new Error ('Whooooops error')
+        }
+        else{
+            return (response.json())
+    }})
+
+    .then(data => console.log(data))
+    .catch(error => console.error('Whoops error!'));
+
+    () => {
+        document.getElementById('pokeChoice').innerHTML = pokemonSelection;
+    }
+}
+*/
+
+const myInput = document.getElementById('myInput')
+
+function displayValue(input){
+    myInput.value += input;
+}
+function clearDisplay(){
+    myInput.value = ' ';
+}
+function calculateDisplay(){
+    myInput.value = eval(myInput.value)
+}
+
